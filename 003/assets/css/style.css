@@ -1,0 +1,4333 @@
+/*   Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+/* ======font family=========
+font-family: 'Sora', sans-serif;
+*/
+
+:root{
+
+  --thmColor: #D7FB00;
+  --textColor: #181818;
+  --textColor2: #2F2F2F;
+  --white: #fff;
+  --gray: #C7C7C7;
+
+  --f18 : 18px;
+  --f20 : 20px;
+  --f22 : 22px;
+  --f24 : 24px;
+  --f28 : 28px;
+  --f30 : 30px;
+  --f32 : 32px;
+  --f36 : 36px;
+  --f40 : 40px;
+  --f48 : 48px;
+  --f60 : 60px;
+  --f66 : 66px;
+
+}
+
+
+body {
+  font-weight: 400;
+  font-size: var(--f18);
+  margin: 0;
+  padding: 0;
+  font-family: 'Sora', sans-serif;
+  color: var(--textColor);
+}
+
+img{
+  max-width: 100%;
+}
+  
+button {
+  cursor: pointer; 
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+a:focus,
+button:focus {
+  text-decoration: none;
+  outline: none; }
+
+a:focus,
+a:hover {
+  text-decoration: none; }
+
+a,
+button {
+  color: inherit;
+  outline: medium none; 
+  text-decoration: none;
+}
+
+button:focus, input:focus, input:focus, textarea, textarea:focus {
+  outline: 0; }
+
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0px;
+  font-weight: 600;
+ }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit; }
+
+h1 {
+  font-size: var(--f48);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  }
+
+h2 {
+  font-size: var(--f36);
+  }
+
+h3 {
+  font-size: var(--f28);
+  }
+
+h4 {
+  font-size: var(--f24);
+  }
+
+h5 {
+  font-size: var(--f18);
+  }
+
+h6 {
+  font-size: 16px; }
+
+ul {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+
+.thm_btn{
+    padding: 30px 44px;
+    background: var(--thmColor);
+    color: var(--textColor);
+    font-size: var(--f24);
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    display: block;
+    width: max-content;
+    line-height: 1.3;
+}
+.thm_btn.v2{
+  border-radius: 10px;
+border: 1px solid #181818;
+background: #D7FB00;
+}
+
+.sec_padding{
+  padding: 80px 0;
+}
+
+
+.container {max-width: 1170px;}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .thm_btn{
+    padding: 20px 40px;
+    font-size: var(--f18);
+  }
+}
+
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .thm_btn{
+    padding: 17px 30px;
+    font-size: var(--f18);
+}
+  :root{
+    
+      --f18 : 16px;
+      --f20 : 17px;
+      --f22 : 18px;
+      --f24 : 20px;
+      --f28 : 22px;
+      --f30 : 24px;
+      --f32 : 26px;
+      --f36 : 28px;
+      --f40: 30px;
+      --f48: 30px;
+      --f60 : 32px;
+      --f66 : 36px;
+    }
+    .sec_padding{
+      padding: 60px 0;
+    }
+}
+
+/* Large Mobile screen :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .container {width:450px}
+   
+  }
+/* default-css END 
+================================== */
+ 
+
+/*===================================== T003_P001_S001 Header Start =====================================*/
+
+.header-area {
+  padding: 24px 0;
+  width: 100%;
+  z-index: 99;
+  background: var(--textColor);
+  color: var(--white);
+}
+
+.header_right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_right a.thm_btn {
+    padding: 20px 28px;
+    font-size: var(--f18);
+}
+
+.header_right a.thm_color {}
+.menu-area nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.menu-area nav ul li a {
+  font-size: var(--f18);
+  display: inline-block;
+  position: relative;
+  color: var(--gray);
+}
+
+.menu-area nav ul li a.active {
+    font-weight: 600;
+    color: var(--white);
+}
+.menu-area{}
+
+.menu-area ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* humbergar */
+.bar a {
+  width: 35px;
+  height: 35px;
+  float: right;
+  position: relative;
+} 
+.bar a span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  display: block;
+  position: relative;
+  top: 17px;
+  border-radius: 30px;
+  transition: .3s;
+} 
+.bar a span:before {left: 0;content: "";position: absolute;width: 100%;height: 100%;background: #fff;bottom: 10px;border-radius: 30px;transition: .3s;} 
+.bar a span:after {left: 0;content: "";position: absolute;width: 100%;height: 100%;background: #fff;bottom: -10px;border-radius: 30px;transition: .3s;}
+ 
+/* humbarger END */
+ 
+
+/* mobile-menu START */
+.mobile-menu {
+  position: fixed;
+  width: 320px;
+  height: 100vh;
+  background: var(--thmColor);
+  z-index: 99;
+  box-shadow: 0px 0px 9px -1px #737373;
+  top: 0;
+  left: 0;
+  transition: .3s;
+  margin-left: -400px;
+  padding-left: 40px;
+  padding-top: 100px;
+}
+
+.mobile-menu a.thm_btn {
+    width: 100%;
+    padding: 17px 0;
+    background: var(--textColor);
+    color: var(--thmColor);
+    max-width: 250px;
+    position: absolute;
+    bottom: 30px;
+    font-size: var(--f18);
+}
+.siteBar{
+  margin-left: 0; 
+}
+.mobile-menu ul#pills-tab {
+  margin-top: 90px;
+  margin-bottom: 35px !important;
+  display: block;
+}
+.mobile-menu  nav ul li {
+  list-style: none;
+  display: block;
+}
+
+.mobile-menu nav ul li a {
+  color: #272835;
+  font-size: var(--f22);
+  line-height: 2;
+  transition: .3s;
+  font-weight: 500;
+}
+
+.mobile-menu a.bars {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: var(--textColor);
+}
+
+/* Header section END */
+
+
+/*============ Responsive Start =============*/
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .header-area {
+    padding: 16px 0;
+}
+  .header_right a.thm_btn{
+    display: none;
+}
+}
+/*============ Responsive End =============*/
+
+
+/*===================================== T003_P001_S001 Header End  =====================================*/
+
+ 
+
+/*===================================== T003_P001_S001 Start =====================================*/
+
+
+/*============hero Area Start =============*/
+.hero-area {background: var(--textColor);color: var(--white);padding: 50px 0 100px;position: relative;z-index: 1;overflow: hidden;}
+
+.hero-area:before {
+    content: "";
+    position: absolute;
+    width: 32%;
+    height: 100%;
+    background: var(--thmColor);
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.image {
+}
+
+.image img {
+    position: absolute;
+}
+.hero__imgs1 {right: 0;top: 0;}
+
+img.hero__imgs1_2 {bottom: 0;right: 0;}
+
+img.hero__imgs2_2 {position: absolute;right: 24px;}
+.hero__imgs2 {bottom: 150px;left: 50%;transform: translateX(-50%);z-index: -1;}
+.hero__imgs3 {position: absolute;top: 0;right: 0;max-width: 1162px;z-index: -1;}
+.hero__content {
+}
+
+.hero__content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 0 40px;
+}
+
+.hero__content ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--f20);
+    color: var(--gray);
+}
+
+.hero__content ul li span {
+    display: block;
+}
+
+.hero__content h1 {
+    font-size: var(--f66);
+}
+
+.hero__content h1 span,.border_img {
+    position: relative;
+}
+
+.hero__content h1 span img,.border_img img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.hero__img {text-align: right;position: relative;}
+/*============hero Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+@media (min-width: 1350px) and (max-width: 1500px) {
+  .hero-area:before {
+    width: 26%;
+}
+
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+  .hero-area:before {
+    width: 21%;
+}
+
+}
+
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .hero-area {
+    padding: 40px 0 70px;
+  }
+  .hero__imgs1,
+  .hero__imgs1_2 
+  {
+    max-width: 60px;
+}
+  .hero__content h1 {
+      font-size: 50px;
+      max-width: 420px;
+  }
+  img.hero__imgs2_2{
+    right: 60px;
+    top: -31px;
+}
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .hero__imgs2 {display: none;}
+  
+  .hero-area {
+    padding: 25px 0 70px;
+  }
+
+.hero-area .row {
+    flex-direction: column-reverse;
+}
+
+  .hero__content h1 {
+      font-size: 40px;
+      max-width: 500px;
+      text-align: center;
+  }
+  .hero-area:before {
+    display: none;
+}
+
+.hero__img {
+    text-align: center;
+}
+
+.hero__img img {
+    max-width: 300px;
+}
+
+img.hero__imgs2_2 {
+    right: 29%;
+    scale: .8;
+    top: -15px;
+}
+
+.hero__content {
+    max-width: 471px;
+    margin-inline: auto;
+    margin-top: 30px;
+}
+
+.hero__content .thm_btn {
+    width: max-content;
+    margin-inline: auto;
+    display: block;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+ 
+  .hero__imgs2 {display: none;}
+  
+  .hero-area {
+    padding: 25px 0 70px;
+  }
+
+.hero-area .row {
+    flex-direction: column-reverse;
+}
+
+  .hero__content h1 {
+      max-width: 350px;
+      text-align: center;
+      font-size: 30px;
+      margin-inline: auto;
+  }
+  .hero-area:before {
+    display: none;
+}
+
+.hero__img {
+    text-align: center;
+}
+
+.hero__img img {
+    max-width: 210px;
+}
+
+img.hero__imgs2_2 {
+    right: 18%;
+    scale: .5;
+    top: -28px;
+}
+
+.hero__content {
+    max-width: 350px;
+    margin-inline: auto;
+    margin-top: 30px;
+}
+
+.hero__content .thm_btn {
+    width: max-content;
+    margin-inline: auto;
+    display: block;
+}
+.hero__imgs1,img.hero__imgs1_2 {
+  display: none;
+}
+.hero__content ul li {
+  font-size: 14px;
+}
+}
+ 
+
+
+/*============ Responsive End =============*/
+
+
+/*===================================== T003_P001_S001 End  =====================================*/
+
+
+/*=====================================  T003_P001_S002 Start =====================================*/
+
+/*============Brand Area Start =============*/
+.Brand-area {background: var(--thmColor);padding: 60px 0;}
+.Brand_slider {
+}
+
+.Brand_slider a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*============Brand Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Brand-area{
+    padding: 40px 0;
+}
+
+}
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Brand-area{
+    padding: 30px 0;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+
+/*===================================== T003_P001_S002 End  =====================================*/
+
+
+
+/*=====================================  T003_P001_S003 Start =====================================*/
+
+/*============trainer Area Start =============*/
+.trainer-area {background: var(--textColor);color: var(--white);}
+
+.trainer__content {
+}
+
+.trainer__content h1 .border_img img {
+    bottom: -7px;
+}
+
+.trainer__content p {
+    font-size: var(--f20);
+    color: var(--gray);
+    padding-right: 50px;
+    margin: 20px 0 40px;
+}
+
+.trainer__content h1 {}
+.border_img {display: inline-block;z-index: 1;}
+.trainer__img {
+}
+/*============trainer Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .trainer__content p {
+    padding: 0;
+    font-size: var(--f18);
+}
+
+.trainer__content h1 {
+    font-size: var(--f40);
+}
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .trainer__content p {
+    padding: 0;
+    font-size: var(--f18);
+}
+
+.trainer__content h1 {
+    font-size: var(--f36);
+}
+.trainer__img {
+  max-width: 420px;
+  margin: auto;
+}
+
+.trainer__content {
+  max-width: 440px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.border_img img {bottom: -9px;}
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .trainer__content p {
+    padding: 0;
+    font-size: 16px;
+}
+
+.trainer__content h1 {
+    font-size: var(--f36);
+}
+.trainer__img {
+  max-width: 301px;
+  margin: auto;
+}
+
+.trainer__content {
+  max-width: 440px;
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.border_img img {bottom: -9px;}
+ 
+}
+/*============ Responsive End =============*/
+
+
+/*===================================== T003_P001_S003 End  =====================================*/
+
+
+
+/*=====================================  T003_P001_S004 Start =====================================*/
+
+/*============service Area Start =============*/
+.service-area {background: var(--textColor);color: var(--white);}
+.service__blk {text-align: center;max-width: 340px;margin-inline: auto;}
+
+.service__blk p {
+    color: var(--gray);
+}
+
+.service__blk h4 {
+    margin: 50px 0 20px;
+    font-weight: 600;
+}
+
+.service__blk i {
+    display: block;
+}
+
+.service__blk i svg g path {
+}
+/*============service Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .service__blk {
+    margin-bottom: 50px;
+}
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .service__blk {
+    margin-bottom: 70px;
+}
+
+.service__blk h4 {
+    margin: 25px 0 10px;
+}
+
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S004 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S005 Start =====================================*/
+
+/*============feedback Area Start =============*/
+.feedback-area {background: var(--textColor);}
+.feedback_slider {
+}
+.feedback_blk {background: #2F2F2F;color: var(--white);padding: 20px;direction: ltr;}
+
+.feedback_blk h5 {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.feedback_blk p {
+    font-size: var(--f18);
+    margin-bottom: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.feedback_blk .flex {display: flex;align-items: center;justify-content: space-between;}
+/*============feedback Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S005 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S006 Start =====================================*/
+
+/*============Schedule Area Start =============*/
+.Schedule-area {background: var(--textColor);color: var(--white);}
+.Schedule__content {
+}
+
+.Schedule__content p {
+    color: var(--gray);
+    font-size: var(--f20);
+    max-width: 500px;
+    margin-left: auto;
+}
+.Schedule__img {margin-top: 60px;display: flex;justify-content: space-between;align-items: center;position: relative;padding-top: 135px;}
+.Schedule-1 {
+}
+.Schedule-2 {position: absolute;left: 150px;top: 0;}
+.Schedule-3 {position: relative;z-index: 9;}
+.Schedule-4 {position: absolute;right: 100px;top: 0;}
+.Schedule-5 {position: relative;z-index: 9;}
+/*============Schedule Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+  .Schedule-2,.Schedule-4 {
+    max-width: 338px;
+}
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+ .Schedule__img .Schedule-2, .Schedule__img .Schedule-4 {max-width: 230px;}
+.Schedule__img img {
+  max-width: 219px;
+}
+
+.Schedule__img {
+  padding-top: 70px;
+  max-width: 750px;
+  margin-inline: auto;
+}
+
+.Schedule__content p {
+    margin: auto;
+    margin-top: 30px;
+}
+
+.Schedule__content {
+    text-align: center;
+}
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+  .Schedule__img .Schedule-2, .Schedule__img .Schedule-4 {
+    position: relative;
+    margin: -42px;
+    left: unset;
+    top: unset;
+    right: unset;
+    z-index: 9;
+}
+.Schedule__img img {
+}
+
+.Schedule__img {
+  padding-top: 0px;
+  flex-direction: column;
+}
+
+.Schedule__content p {
+    margin: auto;
+    margin-top: 30px;
+}
+
+.Schedule__content {
+    text-align: center;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S006 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S007 Start =====================================*/
+
+/*============price Area Start =============*/
+.price-area {background: var(--textColor);color: var(--white);}
+.price__img {
+}
+.price__content {margin-left: -20px;}
+
+.price__content h1 {
+    margin-bottom: 0;
+}
+.border_img {
+}
+.price__wrp {display: flex;margin: 60px 0;gap: 50px 70px;}
+.price__blk {
+}
+
+.price__blk.active h5 {
+    color: var(--bs-white);
+}
+
+.price__blk.active h1 {
+    color: var(--thmColor);
+}
+
+.price__blk.active h1 span {
+    color: var(--white);
+}
+
+.price__blk ul li {
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.price__blk ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.price__blk h1 {
+    color: var(--gray);
+    margin-bottom: 30px;
+    text-align: left !important;
+}
+
+.price__blk h1 span {
+    font-size: var(--f24);
+    font-weight: 600;
+}
+
+.price__blk h5 {
+    font-size: var(--f20);
+    font-weight: 600;
+    color: var(--gray);
+}
+/*============price Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .price__content h1 {
+    font-size: 40px;
+}
+
+.price__img {
+    max-width: 400px;
+}
+
+.price__wrp {
+    gap: 50px 36px;
+}
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .price__content h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.price__img {
+    max-width: 400px;
+    margin-inline: auto;
+    margin-bottom: 40px;
+}
+
+.price__wrp {
+    gap: 50px 36px;
+    justify-content: center;
+}
+.price__content {
+  max-width: 499px;
+  margin-inline: auto;
+}
+
+.price__content > a {
+  display: block;
+  margin: auto;
+  width: max-content;
+}
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .price__content h1 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.price__blk h1 {
+    margin-bottom: 20px;
+}
+
+.price__img {
+    max-width: 400px;
+    margin-inline: auto;
+    margin-bottom: 40px;
+}
+
+.price__wrp {
+    gap: 50px 36px;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 250px;
+    margin-inline: auto;
+    margin: 40px auto;
+}
+.price__content {
+  max-width: 499px;
+  margin-inline: auto;
+}
+
+.price__content > a {
+  display: block;
+  margin: auto;
+  width: max-content;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S007 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S008 Start =====================================*/
+
+/*============counter Area Start =============*/
+.counter-area {background: var(--thmColor);}
+
+.counter-area .row {
+    gap: 20px 0;
+}
+.counter_blk {text-align: center;}
+
+.counter_blk span {
+}
+
+.counter_blk h1 {
+    font-weight: 600;
+}
+
+.counter_blk p {
+    font-size: var(--f20);
+}
+/*============counter Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S008 End  =====================================*/
+
+
+
+
+/*=====================================  Guidance Start =====================================*/
+
+/*============Guidance Area Start =============*/
+.Guidance-area {background: var(--textColor);color: var(--white);}
+.Guidance__title {
+}
+
+.Guidance__title p {
+    margin-bottom: 0;
+    font-size: var(--f20);
+    color: var(--gray);
+}
+.border_img {
+}
+.Guidance__list {margin: 60px 0;gap: var(--f40) 0;}
+
+.Guidance__blk {display: flex;align-items: center;gap: 20px;}
+
+.Guidance__blk h4 {
+    margin-bottom: 0;
+}
+
+.Guidance__blk i {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--thmColor);
+}
+.Guidance-area .thm_btn {
+}
+/*============Guidance Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Guidance__title {
+      text-align: center;
+  }
+  
+  .Guidance__title h1 {
+      margin-bottom: 40px;
+  }
+  
+  .Guidance-area .thm_btn {
+      margin: auto;
+  }
+
+}
+
+
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Guidance__title {
+    text-align: center;
+}
+
+.Guidance__list {
+    margin: 40px 0;
+    gap: 20px 0;
+}
+
+.Guidance__blk h4 {
+    font-size: 18px;
+}
+
+.Guidance__title h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+  .Guidance-area .thm_btn {
+    margin: auto;
+}
+
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== Guidance End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S009 Start =====================================*/
+
+/*============Frequently Area Start =============*/
+.Frequently-area {background: var(--textColor);color: var(--white);}
+.Frequently__title {
+}
+
+.Frequently__title p {
+    color: var(--gray);
+    font-size: var(--f20);
+}
+.Frequently__accordion {max-width: 970px;margin: var(--f66) auto 0;}
+.Frequently__accordion  .accordion-item {border-bottom: 1px solid #2F2F2F;}
+.Frequently__accordion  .accordion-header {
+}
+.Frequently__accordion  .accordion-button {text-align: left;display: flex;align-items: center;gap: 20px;font-size: var(--f24);border: none;padding: 20px 0;}
+
+.Frequently__accordion .accordion-button span {
+    color: var(--textColor);
+    font-weight: 700;
+    text-shadow: rgb(76, 76, 76) 1px 0px 0px, rgb(76, 76, 76) 0.540302px 0.841471px 0px, rgb(76, 76, 76) -0.416147px 0.909297px 0px, rgb(76, 76, 76) -0.989992px 0.14112px 0px, rgb(76, 76, 76) -0.653644px -0.756802px 0px, rgb(76, 76, 76) 0.283662px -0.958924px 0px, rgb(76, 76, 76) 0.96017px -0.279415px 0px;
+}
+.Frequently__accordion  .accordion-body {font-size: var(--f20);padding-left: 60px;max-width: 98%;color: var(--gray);padding-top: 5px;}
+.Frequently__accordion .accordion-button::after{
+  background-image: url(../img/down-arrow.svg);
+}
+
+.Frequently__accordion .accordion-button:not(.collapsed)::after {
+  background-image: url(../img/up-arrow.svg);
+  transform: rotate(0deg);
+}
+/*============Frequently Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Frequently__accordion .accordion-button{
+    font-size: 18px;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.Frequently__accordion .accordion-body {
+    font-size: 15px;
+}
+
+.Frequently__accordion .accordion-button span {
+    font-size: 22px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S009 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============team Area Start =============*/
+.team-area {background: var(--textColor);color: var(--white);}
+
+.team-area .row {gap: 60px 0;}
+
+.team_title {
+}
+
+.team_title p {
+    color: var(--gray);
+    font-size: var(--f20);
+}
+
+.team_blk {text-align: center;}
+
+.team_blk h3 {
+    font-size: var(--f30);
+    margin-top: 30px;
+}
+
+
+/*============team Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .team_title h1 {
+    font-size: 40px;
+  }
+  
+  .team_title p {
+    font-size: 17px;
+  }
+  
+  .team_blk h3 {
+    font-size: 24px;
+  }
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .team_title {
+    text-align: center;
+}
+
+.team-area .row {
+    gap: 40px 0;
+}
+
+.team_title h1 {
+    font-size: 40px;
+    margin-bottom: -18px;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .team_title {
+    text-align: center;
+}
+
+.team-area .row {
+    gap: 28px 0;
+}
+
+.team_title h1 {
+    margin-bottom: -18px;
+}
+.team-area .thm_btn {margin-top: 20px !important;}
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S011 Start =====================================*/
+
+/*============Reviwe Area Start =============*/
+.Reviwe-area {background: var(--textColor);color: var(--white);}
+.Reviwe__title {
+}
+
+.Reviwe__title p {
+    font-size: var(--f20);
+    color: var(--gray);
+}
+.Reviwe_blk {background: #2F2F2F;padding: 20px;margin-top: 24px;}
+
+.Reviwe_blk p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.Reviwe_blk ul {
+    display: flex;
+    margin: 12px 0 30px;
+}
+.Reviwe__name {display: flex;align-items: center;justify-content: space-between;}
+
+.Reviwe__name a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.Reviwe__name h4 {
+    margin: 0;
+}
+/*============Reviwe Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Reviwe__title h1 {
+    font-size: 40px;
+}
+
+.Reviwe_blk p {
+    font-size: 16px;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Reviwe__title h1 {font-size: 30px;}
+
+.Reviwe_blk p {
+    font-size: 16px;
+}
+.Reviwe__title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S011 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S012 Start =====================================*/
+
+/*============goal Area Start =============*/
+.goal-area {background-size: cover;background-position: center;}
+.goal__content{
+    text-align: center;
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+.goal__content p {
+    font-size: var(--f20);
+    color: #2F2F2F;
+    margin-bottom: var(--f60);
+}
+
+.goal__content a {
+    padding: 30px 50px;
+    background: var(--textColor);
+    display: block;
+    width: max-content;
+    margin: auto;
+    color: var(--white);
+    font-size: var(--f24);
+    font-weight: 600;
+}
+
+.goal__content p {}
+
+.goal__content h1 {
+    font-size: var(--f60);
+    line-height: 1.2;
+}
+/*============goal Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .goal__content h1{
+    font-size: 40px;
+}
+
+.goal__content a {
+    padding: 24px 40px;
+    font-size: var(--f20);
+}
+}
+
+
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+  .goal__content a{
+    padding: 18px 30px;
+    font-size: var(--f18);
+}
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S012 End  =====================================*/
+
+
+
+
+/*=================footer====================  T003_P001_S013 Start =====================================*/
+
+/*============footer Area Start =============*/
+.footer-area {background: var(--textColor);color: var(--white);}
+.footer__content {
+}
+
+.footer__content a {
+    display: block;
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 14px;
+}
+
+.footer__content a span {
+    color: #fff;
+}
+.social__link {margin-top: 28px;}
+
+.social__link a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border-radius: 50%;
+    margin: 0;
+    transition: all .3s ease;
+}
+
+.social__link a:hover {
+    background: var(--thmColor);
+}
+
+.social__link ul {
+    display: flex;
+    gap: 14px;
+}
+.footer__nav {}
+
+.footer__nav h4 {
+    margin-bottom: 14px;
+}
+
+.footer__nav a {
+    color: var(--gray);
+    line-height: 2.2;
+}
+
+.footer__nav.fn_1 {
+    margin-left: -30px;
+}
+.Newsletter__content {
+}
+
+.Newsletter__content p {
+    color: var(--gray);
+}
+
+.Newsletter__content h4 {
+    margin-bottom: 24px;
+}
+.mail_box {display: flex;gap: 16px;}
+
+.mail_box input {
+    border-radius: 4px;
+    border: 1px solid var(--thmColor);
+    background: no-repeat;
+    color: var(--thmColor);
+    padding: 12px 14px;
+    text-transform: capitalize;
+    max-width: 218px;
+}
+
+.mail_box input::placeholder {
+    color: var(--thmColor);
+    font-weight: 300;
+}
+
+.mail_box a {
+    background: var(--thmColor);
+    color: var(--textColor);
+    padding: 11px 25px;
+    display: block;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.app__btn {margin: 25px 0;display: flex;align-items: center;gap: 20px;}
+/*============footer Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .mail_box input {
+    max-width: 186px;
+    font-size: 16px;
+}
+
+.mail_box a {
+    padding: 11px 18px;
+    font-size: 15px;
+}
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Newsletter__content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.mail_box {
+    justify-content: center;
+}
+
+.app__btn {
+    justify-content: center;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Newsletter__content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.mail_box {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mail_box input {
+    max-width: 300px;
+    width: 100%;
+}
+
+.app__btn {
+    justify-content: center;
+}
+.footer__nav.fn_1 {
+  margin: 30px 0 20px;
+}
+
+.footer__nav h4 {
+  margin-bottom: 10px;
+}
+
+.footer__content a {
+  margin-bottom: 10px;
+}
+
+.social__link {
+  margin-top: 16px;
+}
+
+.footer__nav a {
+  line-height: 2;
+}
+
+.mail_box a {
+  padding: 9px 25px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*================Footer===================== T003_P001_S013 End  =====================================*/
+
+
+/*=================header==================== T003_P001_S001 Header Start =====================================*/
+
+.header-area.white {
+  padding: 24px 0;
+  width: 100%;
+  z-index: 99;
+  background: var(--white);
+}
+
+.header-area.white .header_right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-area.white .header_right a.thm_btn {
+    padding: 20px 28px;
+    font-size: var(--f18);
+}
+
+.header-area.white .menu-area nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.header-area.white .menu-area nav ul li a {
+  font-size: var(--f18);
+  display: inline-block;
+  position: relative;
+  color: var(--textColor2);
+}
+
+.header-area.white .menu-area nav ul li a.active {
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.header-area.white .menu-area ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* humbergar */
+.header-area.white .bar a {
+  width: 35px;
+  height: 35px;
+  float: right;
+  position: relative;
+} 
+.header-area.white .bar a span {
+  width: 100%;
+  height: 3px;
+  background: var(--textColor);
+  display: block;
+  position: relative;
+  top: 17px;
+  border-radius: 30px;
+  transition: .3s;
+} 
+.header-area.white .bar a span:before {left: 0;content: "";position: absolute;width: 100%;height: 100%;background: var(--textColor);bottom: 10px;border-radius: 30px;transition: .3s;} 
+.header-area.white .bar a span:after {left: 0;content: "";position: absolute;width: 100%;height: 100%;background: var(--textColor);bottom: -10px;border-radius: 30px;transition: .3s;}
+ 
+/* humbarger END */
+ 
+
+/* mobile-menu START */
+.mobile-menu.white {
+  position: fixed;
+  width: 320px;
+  height: 100vh;
+  background: var(--thmColor);
+  z-index: 99;
+  box-shadow: 0px 0px 9px -1px #737373;
+  top: 0;
+  left: 0;
+  transition: .3s;
+  margin-left: -400px;
+  padding-left: 40px;
+  padding-top: 100px;
+}
+
+.mobile-menu.white a.thm_btn {
+    width: 100%;
+    padding: 17px 0;
+    background: var(--textColor);
+    color: var(--thmColor);
+    max-width: 250px;
+    position: absolute;
+    bottom: 30px;
+    font-size: var(--f18);
+}
+.mobile-menu.white.siteBar{
+  margin-left: 0; 
+}
+.mobile-menu.white ul#pills-tab {
+  margin-top: 90px;
+  margin-bottom: 35px !important;
+  display: block;
+}
+.mobile-menu.white  nav ul li {
+  list-style: none;
+  display: block;
+}
+
+.mobile-menu.white nav ul li a {
+  color: #272835;
+  font-size: var(--f22);
+  line-height: 2;
+  transition: .3s;
+  font-weight: 500;
+}
+
+.mobile-menu.white a.bars {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 40px;
+  color: var(--textColor);
+}
+
+/* Header section END */
+
+
+/*============ Responsive Start =============*/
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .header-area.white{
+    padding: 16px 0;
+}
+.header-area.white .header_right a.thm_btn{
+    display: none;
+}
+}
+/*============ Responsive End =============*/
+
+
+/*====================header================= T003_P001_S001 Header End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S001 Start =====================================*/
+
+/*============YogaSessions Area Start =============*/
+.YogaSessions-area {
+}
+.YogaSessions__content {
+}
+
+.YogaSessions__content ul {
+    display: flex;
+    margin-top: var(--f48);
+    gap: 30px;
+    text-align: center;
+}
+
+.YogaSessions__content ul h1 {
+}
+
+.YogaSessions__content ul p {
+    margin: 0;
+    color: var(--textColor2);
+}
+
+.YogaSessions__content > p {
+    max-width: 470px;
+    color: var(--textColor2);
+    margin: 20px 0 var(--f48);
+}
+
+.YogaSessions__content > h1 {
+    position: relative;
+    font-size: var(--f66);
+}
+
+.YogaSessions__content h1 img {
+    position: absolute;
+    left: -8px;
+    bottom: 0;
+    z-index: -1;
+}
+.YogaSessions__img {position: absolute;right: -20px;bottom: -80px;}
+
+.YogaSessions__img {}
+.yoga-stk {position: relative;width: max-content;position: absolute;}
+
+.yoga-stk h2 span {
+    font-size: var(--f18);
+    display: block;
+    color: var(--gray);
+    font-weight: 400;
+    width: max-content;
+}
+
+.yoga-stk h2 {
+    text-align: center;
+    position: absolute;
+    z-index: 9;
+    color: var(--white);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+/*============YogaSessions Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .YogaSessions__img {
+    right: 0;
+}
+
+.YogaSessions__img > i {
+    display: block;
+    max-width: 500px;
+}
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .YogaSessions__img {
+    right: 0;
+}
+
+.YogaSessions__img > i {
+    display: block;
+    max-width: 360px;
+}
+.YogaSessions__content > h1 {
+  font-size: 46px;
+}
+
+.YogaSessions__content h1 img {
+  max-width: 422px;
+}
+
+.yoga-stk {
+  scale: .7;
+  top: -25px;
+  left: -25px;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .YogaSessions-area .row{
+    flex-direction: column-reverse;
+  }
+  .YogaSessions__img {
+    right: 0;
+    position: relative;
+    bottom: 0;
+    margin-bottom: 30px;
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.YogaSessions__img > i {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+}
+.YogaSessions__content > h1 {
+  font-size: 25px;
+}
+
+.YogaSessions__content h1 img {
+  max-width: 230px;
+  left: -3px;
+}
+
+.yoga-stk {
+  scale: .7;
+  top: -25px;
+  left: -25px;
+}
+.YogaSessions__content ul {
+  gap: 20px;
+  justify-content: space-around;
+  max-width: 360px;
+}
+
+.YogaSessions__content ul p {
+  font-size: 15px;
+}
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S001 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P002_S002 Start =====================================*/
+
+/*============YogaReview Area Start =============*/
+.YogaReview-area {
+  background-image: url(../img/YogaReview-bg.png);
+  background-size: cover;
+}
+
+.YogaReview__content {text-align: center;color: var(--white);}
+
+.YogaReview__content p {
+    margin-bottom: var(--f40);
+    max-width: 640px;
+    font-size: var(--f20);
+    margin-inline: auto;
+}
+
+/*============YogaReview Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S002 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P002_S003 Start =====================================*/
+
+/*============yogaClass Area Start =============*/
+.yogaClass-area {
+}
+.yogaClass_title {
+}
+
+.yogaClass_img {position: relative;}
+.yogaClass_shape {position: absolute;z-index: -1;left: 0;top: 0;}
+
+.yogaClass__content {
+}
+
+.yogaClass__content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+}
+
+.yogaClass__content ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--f20);
+    color: var(--textColor2);
+}
+
+.yogaClass__content h3 {
+    font-size: var(--f30);
+    margin-bottom: var(--f30);
+}
+/*============yogaClass Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .yogaClass__content ul {
+    gap: 16px 0;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .yogaClass_img {
+    margin: 30px 20px 40px;
+}
+
+.yogaClass_title h1 {
+    font-size: 26px;
+}
+
+.yogaClass__content ul {
+    gap: 14px 0;
+}
+
+.yogaClass__content h3 {
+    margin-bottom: 16px;
+}
+
+.yogaClass__content {
+    padding-left: 20px;
+}
+ 
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S003 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P002_S004 Start =====================================*/
+
+/*============modernYoga Area Start =============*/
+.modernYoga-area {
+}
+.modernYoga__img {
+}
+.modernYoga__content {margin-left: -30px;}
+
+.modernYoga__content p {
+    color: var(--textColor2);
+    margin-bottom: var(--f40);
+}
+
+.modernYoga__content h1 {
+    margin: 15px 0 20px;
+}
+
+.modernYoga__content span {
+    background: var(--thmColor);
+    font-size: var(--f20);
+    padding: 6px 8px;
+}
+
+/*============modernYoga Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .modernYoga__content {
+    margin: auto;
+    text-align: center;
+  }
+  
+  .modernYoga__content a {
+    margin: auto;
+  }
+  
+  .modernYoga__img {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .modernYoga__content {
+    margin: auto;
+    text-align: center;
+  }
+  
+  .modernYoga__content a {
+    margin: auto;
+  }
+  
+  .modernYoga__img {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 300px;
+    margin-inline: auto;
+  }
+ 
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S004 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P002_S005 Start =====================================*/
+
+/*============yogaCounter Area Start =============*/
+.yogaCounter-area {
+  background-image: url(../img/yogaCounter-bg.png);
+  color: var(--white);
+  background-position: center;
+  background-size: cover;
+}
+
+.yogaCounter__content {position: relative;}
+
+.yogaCounter__content:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    background: var(--textColor2);
+    transform: translateY(-50%);
+}
+
+.yogaCounter__content ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.yogaCounter__content ul li {
+    flex-basis: 33%;
+    text-align: center;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-left: 1px solid var(--textColor2);
+}
+
+.yogaCounter__content ul li:nth-child(1),.yogaCounter__content ul li:nth-child(4) {
+    border: none;
+}
+
+.yogaCounter__content ul li p {
+    margin: 0;
+    font-size: var(--f20);
+    color: var(--gray);
+}
+/*============yogaCounter Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .yogaCounter__content ul li {
+    flex-basis: 50%;
+    border-top: 1px solid var(--textColor2);
+    border-left: none;
+    height: 150px;
+}
+
+.yogaCounter__content ul li:nth-child(1), .yogaCounter__content ul li:nth-child(4) {
+    border-top: 1px solid var(--textColor2);
+}
+
+.yogaCounter__content:after {
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+.yogaCounter__content ul li:nth-child(1), .yogaCounter__content ul li:nth-child(2) {
+    border: none;
+}
+
+.yogaCounter__content ul li p {
+    font-size: 15px;
+    max-width: 100px;
+    margin-inline: auto;
+}
+ 
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S005 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S006 Start =====================================*/
+
+/*============ Area Start =============*/
+.onlineClass-Area {
+}
+.onlineClass__title {
+}
+
+.onlineClass__title p {
+    max-width: 560px;
+    margin-inline: auto;
+}
+.onlineClass__blk {margin-bottom: var(--f60);}
+.onlineClass__blk__Text {background: var(--textColor);color: var(--white);padding: 20px;width: calc(100% - 40px);margin: auto;margin-top: -47px;position: relative;}
+
+.onlineClass__blk__Text h5 {
+    font-size: var(--f20);
+}
+
+.onlineClass__blk__Text p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.onlineClass__blk__Text p span {
+    font-weight: 600;
+    color: var(--thmColor);
+    font-size: var(--f20);
+}
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .onlineClass__blk__Text h5 {
+    font-size: var(--f18);
+}
+
+}
+
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .onlineClass__blk {
+    max-width: 330px;
+    margin-inline: auto;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S006 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S007 Start =====================================*/
+
+/*============ Area Start =============*/
+.YogaFeatured-area {background: var(--thmColor);}
+.YogaFeatured__title {
+}
+.YogaFeatured__wrp {max-width: 950px;margin: auto;}
+
+.YogaFeatured__wrp .row {
+    gap: 24px 0;
+}
+.YogaFeatured__blk {background: var(--white);display: flex;align-items: center;justify-content: center;height: 120px;}
+
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .YogaFeatured__blk {
+  height: 100px;
+  max-width: 300px;
+  margin-inline: auto;
+  scale: .9;
+  }
+
+.YogaFeatured__wrp .row {
+    gap: 10px 0;
+}
+ 
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S007 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S008 Start =====================================*/
+
+/*============ExpYoga Area Start =============*/
+.ExpYoga-Area {
+}
+.ExpYoga__title {
+}
+
+.ExpYoga__title p {
+    max-width: 570px;
+    margin-inline: auto;
+}
+.ExpYoga__content {text-align: right;}
+
+.ExpYoga__content.right {
+    text-align: left;
+}
+.ExpYoga__blk:first-child {margin-bottom: var(--f48);}
+
+.ExpYoga__blk p {
+    font-size: 16px;
+    color: var(--textColor2);
+}
+.ExpYoga__img {margin-top: -30px;}
+.ExpYoga__blk .right {
+}
+/*============ExpYoga Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .ExpYoga__blk p {
+    font-size: 14px;
+  }
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .ExpYoga-Area .mid {
+    order: -1;
+}
+
+.ExpYoga__blk {
+    margin-bottom: 30px !important;
+    text-align: center;
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.ExpYoga__content {
+    text-align: left;
+}
+
+.ExpYoga__img {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .ExpYoga-Area .mid {
+    order: -1;
+}
+
+.ExpYoga__blk {
+    margin-bottom: 30px !important;
+    text-align: center;
+    max-width: 400px;
+    margin-inline: auto;
+}
+
+.ExpYoga__blk p {
+    font-size: 15px;
+}
+
+.ExpYoga__content {
+    text-align: left;
+}
+
+.ExpYoga__img {
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 300px;
+    margin-inline: auto;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S008 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S009 Start =====================================*/
+
+/*============ Area Start =============*/
+
+.yogaLife-area {
+}
+.yogaLife__title {max-width: 500px;}
+
+.yogaLife__title p {
+    color: var(--textColor2);
+    margin-bottom: var(--f40);
+}
+.yogaLife__content {display: flex;flex-direction: column;gap: 30px;}
+.progress__blk {
+}
+
+.progress__blk p {
+    margin-bottom: 10px;
+    font-size: var(--f20);
+    display: flex;
+    justify-content: space-between;
+    color: var(--textColor2);
+}
+
+
+
+/* My Skills */
+
+
+.progress {
+  background: rgb(215 251 0 / 20%);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 14px;
+  width: 100%;
+}
+
+.progress-value {
+  animation: w75 3s normal forwards;
+  background: #D7FB00;
+  height: 100%;
+  width: 0;
+}
+
+.w__75 .progress-value{
+  animation: w75 3s normal forwards;
+}
+.w__90 .progress-value{
+  animation: w90 3s normal forwards;
+}
+.w__85 .progress-value{
+  animation: w85 3s normal forwards;
+}
+
+
+@keyframes w75 {
+  0% { width: 0; }
+  100% {width: 75%;}
+}
+
+@keyframes w90 {
+  0% { width: 0; }
+  100% { width: 90%; }
+}
+
+@keyframes w85 {
+  0% { width: 0; }
+  100% { width: 85%; }
+}
+
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .yogaLife-area .row {
+    gap: 30px 0;
+  }
+  
+  .yogaLife__title {
+    text-align: center;
+    margin: auto;
+  }
+  
+  .yogaLife__title a {
+    margin: auto;
+  }
+  
+  .yogaLife__content {
+    max-width: 500px;
+    margin-inline: auto;
+    gap: 20px;
+  }
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .yogaLife-area .row {
+    gap: 30px 0;
+  }
+  
+  .yogaLife__title {
+    text-align: center;
+    margin: auto;
+  }
+  
+  .yogaLife__title a {
+    margin: auto;
+  }
+  
+  .yogaLife__content {
+    max-width: 500px;
+    margin-inline: auto;
+    gap: 20px;
+  }
+
+.progress__blk p {
+    margin-bottom: 5px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S009 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S010 Start =====================================*/
+
+/*============YogaSvc Area Start =============*/
+.YogaSvc-Area .row {gap: 24px 0;}
+.YogaSvc_blk {text-align: center;}
+
+.YogaSvc_blk p {
+    font-size: 16px;
+    color: var(--textColor2);
+}
+
+.YogaSvc_blk h4 {
+    margin-bottom: 14px;
+}
+
+.YogaSvc_blk i {
+    display: block;
+    height: 60px;
+    margin-bottom: 20px;
+}
+/*============YogaSvc Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S010 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S011 Start =====================================*/
+
+/*============YogaFAQ Area Start =============*/
+
+
+.YogaFAQ__img {max-width: 470px;}
+
+.YogaFAQ__content .accordion-item {background: #F4F4F4;margin-bottom: 20px;}
+
+.YogaFAQ__content .accordion-item.active {
+    border-radius: 10px;
+    border: 1px solid #181818;
+    background: #D7FB00;
+}
+
+.YogaFAQ__content .accordion-button {border: none;font-size: var(--f20);text-align: left;font-weight: 600;padding-right: 100px;}
+.YogaFAQ__content .accordion-button::after {
+  background-image: url(../img/down-arrow.svg);
+  filter: brightness(0);
+  top: 18px;
+  position: absolute;
+  right: 16px;
+}
+.YogaFAQ__content .accordion-body p {margin-bottom: 0;font-size: 16px;}
+
+.YogaFAQ__content .accordion-body {
+    padding-top: 0;
+}
+/*============YogaFAQ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S011 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S012 Start =====================================*/
+
+/*============ Area Start =============*/
+.YogaFeedback-area .swiper{max-width: 530px;}
+.YogaFeedback__content {
+}
+
+.YogaFeedback__content p {
+    font-size: var(--f20);
+    margin-bottom: var(--f60);
+}
+
+.swiper_btns {
+    display: flex;
+    max-width: 115px;
+    position: relative;
+    height: 50px;
+}
+.YogaFeedback__slider {/* max-width: 530px; */margin-left: auto;position: unset;}
+
+
+.swiper_btns i {
+    border-radius: 6px;
+    border: 1px solid #181818;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all .3s;
+}
+
+.swiper_btns i:hover {
+    background: var(--thmColor);
+}
+.YogaFeedback__blk {border-radius: 10px;background: #F4F4F4;padding: 20px;}
+
+.YogaFeedback__blk p {
+    margin: 30px 0;
+}
+.YogaFeedback__top {display: flex;align-items: center;justify-content: space-between;}
+
+.YogaFeedback__top ul {
+    display: flex;
+}
+.YogaFeedback__user {display: flex;align-items: center;gap: 20px;}
+
+.YogaFeedback__user span {
+    color: #3B3B3B;
+}
+
+.YogaFeedback__user h4 {
+    margin-bottom: 0;
+}
+
+.YogaFeedback__user i {
+    width: 60px;
+    height: 60px;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+  display: none;
+}
+.swiper-button-next, .swiper-button-prev{
+}
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .YogaFeedback__content {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.swiper_btns {
+    margin: auto;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .YogaFeedback__content {
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.swiper_btns {
+    margin: auto;
+    max-width: 100px;
+}
+.swiper_btns i {
+  scale: .8;
+}
+
+.YogaFeedback__blk p {
+  font-size: 15px;
+  margin: 20px 0;
+}
+
+.YogaFeedback__top img {
+  scale: .8;
+}
+
+
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S012 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S013 Start =====================================*/
+
+/*============YogaNews Area Start =============*/
+.YogaNews-area {
+}
+.YogaNews__title {
+}
+.YogaNews_blk {border-radius: 10px;overflow: hidden;margin-bottom: var(--f60);}
+.YogaNews_text {position: relative;background: #F4F4F4;padding: 30px 20px 20px;}
+
+.YogaNews_text a {
+    font-size: var(--f20);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all .3s;
+}
+
+.YogaNews_text a:hover {
+    gap: 15px;
+}
+
+.YogaNews_text a img {
+    width: 20px;
+}
+
+.YogaNews_text > h4 {
+    margin-bottom: var(--f30);
+}
+.date {position: absolute;background: var(--textColor);color: var(--white);z-index: 9;bottom: 88%;right: 20px;text-align: center;padding: 8px 12px;}
+
+.date h5 {
+    font-size: var(--f20);
+    margin-bottom: 0;
+}
+
+.date p {
+    margin: 0;
+    font-size: 16px;
+}
+/*============YogaNews Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .YogaNews_text > h4 {
+    font-size: 20px;
+  }
+  
+  .YogaNews_text a {
+    font-size: 18px;
+  }
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .YogaNews_blk {
+    max-width: 350px;
+    margin-inline: auto;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S013 End  =====================================*/
+
+
+
+/*=====================================  T003_P002_S014 Start =====================================*/
+
+/*============ Area Start =============*/
+.yogaChoose__content{
+    background-size: cover;
+    background-position: center center;
+}
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .yogaChoose__content {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 30px 0;
+  }
+  
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .yogaChoose__content {
+    padding: 28px 0;
+    background-size: cover;
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
+.yogaChoose__content a {
+    padding: 14px 24px;
+}
+
+.yogaChoose__content h1 {
+    font-size: 24px;
+}
+section.yogaChoose-Area.sec_padding {
+  padding: 20px 0;
+}
+ 
+}
+
+ 
+/*============ Responsive End =============*/
+
+/*===================================== T003_P002_S014 End  =====================================*/
+
+
+
+/*=====================================  T003_P003_S001 Start =====================================*/
+
+/*============ Area Start =============*/
+.TherapiHero-area {color: var(--white);background-size: cover;background-position: top center;}
+.TherapiHero__content {max-width: 670px;}
+
+.TherapiHero__content h1 {
+    font-size: var(--f66);
+}
+
+.TherapiHero__content h1 span {
+    color: var(--thmColor);
+}
+
+.TherapiHero__content ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.TherapiHero__btn {display: flex;gap: 16px;margin: var(--f48) 0;}
+
+.TherapiHero__btn a.bordered {
+    border: 1px solid #D7FB00;
+    background: no-repeat;
+    color: #D7FB00;
+}
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .TherapiHero__content h1 {
+    font-size: 48px;
+}
+
+.TherapiHero__content {
+    max-width: 510px;
+}
+
+.TherapiHero-area {
+    background-position: unset;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .TherapiHero__content h1 {font-size: 28px;}
+
+.TherapiHero__content {
+    max-width: 510px;
+    text-align: center;
+}
+
+.TherapiHero__content p {
+    font-size: 15px;
+}
+
+.TherapiHero__content ul {
+    justify-content: center;
+}
+
+.TherapiHero__btn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TherapiHero-area {
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S001 End  =====================================*/
+
+
+
+/*=====================================  T003_P003_S002 Start =====================================*/
+
+/*============therapitraining Area Start =============*/
+.therapitraining-area {
+}
+.therapitraining__title {
+}
+.therapitraining__blk {border-radius: 14px;background: #F4F4F4;padding: 30px;display: flex;flex-direction: column;gap: 20px;margin-bottom: var(--f24);}
+
+.therapitraining__blk i {
+    width: 68px;
+    height: 68px;
+    border-radius: 10px;
+    background: var(--thmColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.therapitraining__blk h4 {
+    margin: 0;
+}
+
+.therapitraining__blk p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+/*============therapitraining Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .therapitraining__title h1 {
+    font-size: 28px;
+}
+
+.therapitraining__title h1 br {
+    display: none;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S002 End  =====================================*/
+
+
+
+/*=====================================  T003_P003_S003 Start =====================================*/
+
+/*============therapiReviwe Area Start =============*/
+.therapiReviwe-area {color: var(--white);background-size: cover;}
+
+.therapiReviwe-area .row {
+    gap: 50px 0;
+}
+.therapiReviwe__blk {
+}
+
+.therapiReviwe__blk p {
+    margin: var(--f40) 0;
+    font-size: var(--f20);
+}
+
+.therapiReviwe__blk > img {
+    filter: brightness(16.5);
+}
+.therapiUser__blk {display: flex;align-items: center;gap: 20px;}
+
+.therapiUser__blk h4 {
+    margin: 0;
+}
+
+.therapiUser__blk p {
+    margin: 0;
+    font-size: var(--f18);
+    color: var(--gray);
+}
+
+.therapiUser__blk i {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*============therapiReviwe Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .therapiReviwe__blk > p {
+    font-size: 15px;
+    margin: 20px 0;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S003 End  =====================================*/
+
+
+
+/*=====================================  T003_P003_S004 Start =====================================*/
+
+/*============career Area Start =============*/
+.career-area {
+}
+.career__top {display: flex;align-items: flex-start;justify-content: space-between;margin-bottom: var(--f60);}
+
+.career__top h1 {
+    margin: 0;
+}
+
+.career__top a {
+    flex-shrink: 0;
+}
+.career__blk {border-radius: 10px;background: #F4F4F4;}
+
+.careerContent__blk {
+    padding: 20px;
+}
+
+.careerContent__blk .flex {
+    display: flex;
+    align-items: center;
+    gap: var(--f30);
+    margin-bottom: var(--f28);
+}
+
+.careerContent__blk .flex span {font-size: 16px;font-weight: 600;display: flex;align-items: center;gap: 8px;}
+
+.careerContent__blk h5 {
+    font-size: var(--f20);
+    margin-bottom: var(--f30);
+}
+
+.careerContent__blk p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--textColor2);
+}
+
+.careerContent__blk a {
+    height: 64px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--f18);
+}
+
+/*============career Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .career__top h1 {
+    font-size: 36px;
+}
+
+.career__blk {
+    margin-bottom: 24px;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .career__top h1 br {display: none;}
+
+.career__top h1 {
+    font-size: 28px;
+}
+
+.career__top {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.career__blk {
+    margin-bottom: 24px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S004 End  =====================================*/
+
+
+
+/*=====================================  T003_P003_S005 Start =====================================*/
+
+/*============BrandLogo Area Start =============*/
+.BrandLogo-area {
+}
+
+.BrandLogo-area .row {
+    gap: 28px 0;
+}
+.BrandLogo__blk {text-align: center;display: flex;align-items: center;justify-content: center;}
+/*============BrandLogo Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+ 
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S005 End  =====================================*/
+
+
+
+/*=====================================  T003_P003_S006 Start =====================================*/
+
+/*============Apart Area Start =============*/
+.Apart-area {
+}
+.Apart__content {
+}
+
+.Apart__content ul li {
+    margin-bottom: var(--f24);
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.Apart__content ul li p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: var(--textColor2);
+}
+
+.Apart__content ul li {
+}
+
+.Apart__content > p {
+    color: var(--textColor2);
+    margin-bottom: var(--f60);
+}
+.Apart__img {position: relative;max-width: 500px;margin-left: auto;}
+
+.Apart__img i {
+    display: block;
+    padding: var(--f30);
+    background: var(--thmColor);
+    border-radius: 14px;
+    padding-bottom: 0;
+}
+.best-stk {position: absolute;top: -30px;left: -50px;}
+/*============Apart Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .Apart__img {
+    margin: auto;
+    margin-bottom: 40px;
+    max-width: 430px;
+  }
+  
+  .Apart__content {
+    max-width: 75%;
+    margin-inline: auto;
+  }
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Apart__img {
+    margin: auto;
+    margin-bottom: 40px;
+    max-width: 301px;
+  }
+  
+  .Apart__content {
+    margin-inline: auto;
+  }
+  .Apart__img i {
+    padding: 18px;
+    padding-bottom: 0;
+}
+
+.best-stk {
+    max-width: 80px;
+    top: -17px;
+    left: -30px;
+}
+ 
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S006 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P003_S007 Start =====================================*/
+
+/*============Relaxation Area Start =============*/
+.Relaxation-area {
+}
+.Relaxation__img {
+}
+.Relaxation__content {padding-left: 100px;}
+
+.Relaxation__content a {
+    margin-top: var(--f60);
+}
+
+.Relaxation__content p {
+    color: var(--textColor2);
+}
+
+.Relaxation__content h1 {
+    margin: 20px 0;
+}
+
+.Relaxation__content span {
+    padding: 5px 10px;
+    background: var(--thmColor);
+    border-radius: 6px;
+    font-size: var(--f20);
+    display: block;
+    width: max-content;
+}
+/*============Relaxation Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Relaxation__img {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Relaxation__img {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+.Relaxation__content {
+    padding-left: 0;
+}
+ 
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S007 End  =====================================*/
+
+
+
+/*=====================================  T003_P003_S008 Start =====================================*/
+
+/*============Brand Area Start =============*/
+.Brand-area-Two {background: var(--thmColor);padding: 60px 0;}
+.Brand_slider_two {
+}
+
+.Brand_slider_two a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 290px; */
+    height: 120px;
+    background: var(--white);
+}
+
+/*============Brand Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Brand-area-Two{
+    padding: 40px 0;
+}
+
+}
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Brand-area-Two{
+    padding: 30px 0;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+
+/*===================================== T003_P003_S008 End  =====================================*/
+
+
+
+/*=====================================  T003_P003_S010 Start =====================================*/
+
+/*============massageTherapi Area Start =============*/
+.massageTherapi-area {color: var(--white);background-size: cover;background-position: top center;}
+.massageTherapi__content {padding: var(--f30);max-width: 650px;border-radius: 20px;background: rgba(255, 255, 255, 0.08);backdrop-filter: blur(1.5px);}
+
+.massageTherapi__content p {
+    margin: 20px 0 var(--f48);
+}
+/*============massageTherapi Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+ 
+}
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S010 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P003_S011 Start =====================================*/
+
+/*============success Area Start =============*/
+.success-area {
+}
+.success__title {text-align: center;margin-bottom: 110px;}
+.success__slider {display: flex !important;gap: 100px 50px;flex-wrap: wrap;}
+.success__blk {text-align: center;padding: 70px 30px 30px 30px;border-radius: 16px;background: #F4F4F4;position: relative;width: calc(50% - 25px);}
+
+.success__blk span {
+    color: rgba(47, 47, 47, 0.95);
+    display: block;
+    line-height: 1;
+}
+
+.success__blk p {
+    font-size: var(--f20);
+    margin-bottom: var(--f30);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.success__blk > i {
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+}
+
+.success__blk ul {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 30px;
+}
+.owl-carousel.off {
+  display: block;
+}
+/*============success Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .success__blk p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.success__blk ul {
+  margin: 0 0 20px;
+}
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .success__blk {
+    width: 100%;
+}
+
+.success__blk ul {
+    margin: 0 0 20px;
+}
+
+.success__slider .owl-stage-outer {
+    padding-top: 70px;
+}
+
+.success__title {
+    margin-bottom: 30px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S011 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P003_S012 Start =====================================*/
+
+/*============ Area Start =============*/
+
+.FAQTwo__content .accordion{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0px 50px;
+}
+.FAQTwo__content .accordion-item {background: #F4F4F4;margin-bottom: 20px;width: calc(50% - 25px);}
+
+.FAQTwo__content .accordion-item.active {
+    border-radius: 10px;
+    border: 1px solid #181818;
+    background: #D7FB00;
+}
+
+.FAQTwo__content .accordion-button {border: none;font-size: var(--f20);text-align: left;font-weight: 600;padding-right: 100px;}
+.FAQTwo__content .accordion-button::after {
+  background-image: url(../img/down-arrow.svg);
+  filter: brightness(0);
+  top: 18px;
+  position: absolute;
+  right: 16px;
+}
+.FAQTwo__content .accordion-body p {margin-bottom: 0;font-size: 16px;}
+
+.FAQTwo__content .accordion-body {
+    padding-top: 0;
+}
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .FAQTwo__content .accordion {
+    flex-direction: column;
+    max-width: 580px;
+    margin-inline: auto;
+}
+
+.FAQTwo__content .accordion-item {
+    width: 100%;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .FAQTwo__content .accordion {
+    flex-direction: column;
+    max-width: 580px;
+    margin-inline: auto;
+}
+
+.FAQTwo__content .accordion-item {
+    width: 100%;
+}
+
+.FAQTwo__content .accordion-body p {
+    font-size: 14px;
+}
+.FAQTwo__content .accordion-button{
+    padding-right: 40px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S012 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P003_S013 Start =====================================*/
+
+/*============Enroll Area Start =============*/
+.Enroll-area {
+}
+.Enroll__content {max-width: 630px;margin: auto;}
+
+.Enroll__content p {
+    color: var(--textColor2);
+    font-size: var(--f20);
+    margin-bottom: var(--f40);
+}
+
+/*============Enroll Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P003_S013 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P004_S001 Start =====================================*/
+
+/*============Unleash Area Start =============*/
+.Unleash-area {color: #fff;text-align: center;}
+.Unleash__content {
+}
+
+.Unleash__content p {
+    max-width: 860px;
+    margin-inline: auto;
+    margin-bottom: var(--f40);
+}
+
+.Unleash__content h1 {
+    font-size: var(--f66);
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.Unleash__content h1 span {
+    color: var(--thmColor);
+}
+.Unleash__blk {margin-top: var(--f40);}
+
+.Unleash__blk p {
+    font-size: var(--f24);
+    max-width: 450px;
+    margin-inline: auto;
+}
+
+.Unleash__blk ul {}
+
+.Unleash__blk ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--f30);
+}
+/*============Unleash Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P004_S001 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============artLogo Area Start =============*/
+.artLogo-area {
+}
+
+.artLogo__logo {
+}
+
+.artLogo__logo ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--f60);
+    max-width: 500px;
+    margin: auto;
+}
+
+.artLogo__logo ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*============artLogo Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============Helping Area Start =============*/
+.Helping-area {
+}
+.Helping__img {display: flex;/* flex-wrap: wrap; */flex-direction: column;}
+
+.Helping__img i {
+    display: block;
+}
+.Helping__content {padding-left: 60px;}
+
+.Helping__content h4 {
+    margin: 20px 0;
+}
+
+.Helping__content p {
+    font-size: var(--f20);
+}
+/*============Helping Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .Helping__img {
+    justify-content: center;
+    width: max-content;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .Helping__content {
+    padding: 0 60px;
+    text-align: center;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .Helping__content {
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Helping__content h4 {
+    font-size: 18px;
+}
+
+.Helping__content h1 {
+    font-size: 26px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============prepared Area Start =============*/
+.prepared-area {background-size: cover;background-position: center;}
+.prepared__content {max-width: 620px;margin: auto;}
+
+.prepared__content p {
+    margin: 20px 0 var(--f60);
+}
+
+.prepared__content h1 {}
+
+/*============prepared Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+/*=====================================  T003_P004_S005 Start =====================================*/
+
+/*============benefits Area Start =============*/
+.benefits-area {
+}
+
+.benefits_row {
+    align-items: center;
+}
+.benefits__title {margin-bottom: var(--f60);}
+.benefits__content {display: flex;flex-direction: column;gap: 30px;}
+.benefits__blk {padding: var(--f30);border-radius: 14px;border-left: 3px solid #181818;background: #F4F4F4;}
+
+.benefits__blk h4 {
+    margin-bottom: 20px;
+}
+
+.benefits__blk p {
+    margin-bottom: 0;
+    color: var(--textColor2);
+    font-size: 16px;
+}
+.benefits__img {
+}
+/*============benefits Area End =============*/
+
+
+/*============ Responsive Start =============*/
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.benefits_row{
+    flex-direction: column-reverse;
+}
+.benefits__img {
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.benefits__content {
+  max-width: 75%;
+  margin: auto;
+}
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .benefits_row{
+    flex-direction: column-reverse;
+}
+.benefits__img {
+  max-width: 290px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.benefits__content {
+  max-width: 90%;
+  margin: auto;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P004_S005 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P004_S006 Start =====================================*/
+
+/*============knowledgeFeedback Area Start =============*/
+.knowledgeFeedback-area {color: #ffff;background-position: center;background-size: cover;text-align: center;}
+.knowledgeFeedback__content {display: flex;flex-direction: column;gap: 30px 0;}
+
+.knowledgeFeedback__content p {
+    max-width: 700px;
+    margin: auto;
+}
+
+.knowledgeFeedback__content ul {
+    display: flex;
+    justify-content: center;
+}
+/*============knowledgeFeedback Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P004_S006 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P004_S007 Start =====================================*/
+
+/*============programs Area Start =============*/
+.programs-area {
+}
+.programs__title {
+}
+.programs__blk {text-align: center;margin-bottom: var(--f60);}
+
+.programs__blk p {
+    font-size: 16px;
+    margin-bottom: var(--f30);
+    margin-top: 10px;
+    height: 50px;
+}
+
+.programs__blk h4 {}
+
+.programs__blk i {
+    display: block;
+    height: 270px;
+    margin-bottom: 20px;
+}
+
+.programs__blk a {
+    width: 100%;
+    padding: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--f18);
+    max-width: 330px;
+    margin: auto;
+}
+
+/*============programs Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P004_S007 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P004_S008 Start =====================================*/
+
+/*============gpTraining Area Start =============*/
+.gpTraining-area {position: relative;}
+
+.gpTraining-area:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(89deg, rgba(24, 24, 24, 0.00) 19.76%, #181818 50.68%);
+    z-index: 9;
+}
+
+.gpTraining-area:after {
+    content: "";
+    position: absolute;
+    width: 56%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../img/gpTraining-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+.gpTraining__img {
+}
+.gpTraining__content {color: #fff;position: relative;z-index: 9;}
+
+.gpTraining__content a {
+    width: 100%;
+}
+
+.gpTraining__content p {
+    color: var(--gray);
+    font-size: var(--f20);
+    margin: 20px 0 var(--f40);
+}
+
+.gpTraining__content h1 {}
+.gpTraining__content .input__blk {margin-bottom: 24px;}
+.gpTraining__content .input__blk input{width: 100%;height: 70px;padding: 0 20px;border-radius: 10px;border: 1px solid #404040;background: #181818;color: #fff;}
+
+.gpTraining__content .input__blk input::placeholder {
+    color: #ffff;
+}
+.gpTraining__content .input__blk label{font-size: var(--f20);display: block;margin-bottom: 10px;}
+/*============gpTraining Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Big screen :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .gpTraining-area:after {background-size: cover;width: 70%;}
+
+}
+
+
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .gpTraining-area:after {background-size: cover;width: 85%;}
+
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .gpTraining-area:after {background-size: cover;width: 70%;display: none;}
+  .gpTraining-area:before {
+    background: var(--textColor);
+}
+
+.gpTraining__content {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.gpTraining__content .input__blk label {
+    text-align: left;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .gpTraining-area:before {
+    background: var(--textColor);
+}
+
+.gpTraining__content {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.gpTraining__content .input__blk label {
+    text-align: left;
+}
+.gpTraining__content .input__blk input{
+    height: 58px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P004_S008 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P004_S009 Start =====================================*/
+
+/*============Wetrain Area Start =============*/
+.Wetrain-area {background-position: center;background-size: cover;}
+.Wetrain__title {
+}
+.Wetrain__content {position: relative;border-radius: 20px;overflow: hidden;}
+.Wetrain__content .play__btn {display: block;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+/*============Wetrain Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P004_S009 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P004_S010 Start =====================================*/
+
+/*============students Area Start =============*/
+.students-area {
+}
+.students__title {
+}
+.students__blk {border-radius: 16px;background: #F4F4F4;margin-bottom: var(--f24);display: flex;padding: 20px;gap: 20px;}
+
+.students__blk i {
+    flex-shrink: 0;
+    max-width: 168px;
+}
+.students__blk__text {
+}
+
+.students__blk__text h5 {
+    margin-bottom: 0;
+}
+
+.students__blk__text span {
+    color: rgba(47, 47, 47, 0.95);
+    font-size: 14px;
+}
+
+.students__blk__text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.students__blk__text ul {
+    display: flex;
+    margin-bottom: 12px;
+    gap: 6px;
+}
+
+.students__blk__text ul li img {width: 20px;}
+/*============students Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .students__blk__text p {
+    font-size: 14px;
+  }
+
+}
+
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .students__blk {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+}
+
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .students__blk {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.students__title h1 br {
+    display: none;
+}
+
+.students__blk i {
+    margin: auto;
+}
+
+.students__blk__text p {
+    margin-bottom: 20px;
+}
+
+.students__blk__text ul {
+    justify-content: center;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P004_S010 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P004_S011 Start =====================================*/
+
+/*============satisfaction Area Start =============*/
+.satisfaction-area {
+}
+
+.satisfaction__title {padding-bottom: 100px;}
+
+.satisfaction__title h1 {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.satisfaction__blk {border-radius: 12px;border-bottom: 3px solid #181818;background: #F4F4F4;padding: 30px;position: relative;padding-top: 55px;margin-bottom: 71px;}
+
+.satisfaction__blk i {
+    display: block;
+    position: absolute;
+    top: -40px;
+}
+
+.satisfaction__blk p {
+    margin-bottom: 0;
+    color: var(--textColor2);
+    font-size: 16px;
+    margin-top: 20px;
+}
+/*============satisfaction Area End =============*/
+
+
+/*============ Responsive Start =============*/
+/* small screen :320px. */
+@media (max-width: 767px) {
+  .satisfaction__title{
+    padding-bottom: 80px;
+}
+
+.satisfaction__blk p {
+    font-size: 15px;
+}
+
+.satisfaction__title h1 {
+    font-size: 28px;
+}
+ 
+}
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P004_S011 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============ Area Start =============*/
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============ Area Start =============*/
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============ Area Start =============*/
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============ Area Start =============*/
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============ Area Start =============*/
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+
+
+
+
+/*=====================================  T003_P001_S00 Start =====================================*/
+
+/*============ Area Start =============*/
+
+/*============ Area End =============*/
+
+
+/*============ Responsive Start =============*/
+
+/*============ Responsive End =============*/
+
+/*===================================== T003_P001_S00 End  =====================================*/
+

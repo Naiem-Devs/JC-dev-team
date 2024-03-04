@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>T003_P003_S008</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="shortcut icon" type="image/x-icon" href="#">
+        <!-- Place favicon.ico in the root directory -->
+        
+		<!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+
+       
+
+    <main>
+
+
+        <!---------Brand Section START ---------->
+        <section class="Brand-area-Two">
+            <div class="Brand_slider_two owl-carousel">
+                <a href="#"><img src="assets/img/BrandLogo-1.svg" alt=""></a>
+                <a href="#"><img src="assets/img/BrandLogo-2.svg" alt=""></a>
+                <a href="#"><img src="assets/img/BrandLogo-3.svg" alt=""></a>
+                <a href="#"><img src="assets/img/BrandLogo-4.svg" alt=""></a>
+                <a href="#"><img src="assets/img/BrandLogo-5.svg" alt=""></a>
+                <a href="#"><img src="assets/img/BrandLogo-6.svg" alt=""></a>
+                <a href="#"><img src="assets/img/BrandLogo-7.svg" alt=""></a>
+                <a href="#"><img src="assets/img/BrandLogo-8.svg" alt=""></a>
+            </div>
+        </section>
+        <!---------Brand Section End ---------->
+
+
+
+    </main>
+
+    
+		<!-- JS here --> 
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script>
+             // owlCarousel
+            $(".Brand_slider_two").owlCarousel({
+                loop: true,
+                margin: 30,
+                items: 6,
+                navText: [
+                '<i class="fa fa-angle-left"></i>',
+                '<i class="fa fa-angle-right"></i>'
+                ],
+                nav: false,
+                dots: false,
+                autoplay:true,
+                smartSpeed: 1500,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+                responsive: {
+                    0: {
+                        margin: 10,
+                        items: 2
+                    },
+                    450: {margin: 30,
+                        items: 2
+                    },
+                    767: {
+                        margin: 30,
+                        items: 3
+                    },
+                    800: {
+                        margin: 40,
+                        items: 3
+                    },
+                    992: {
+                        items: 3
+                    },
+                    1150: {
+                        items: 4
+                    },
+                    1420: {
+                        items: 5
+                    },
+                    1620: {
+                        items: 6
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
+
